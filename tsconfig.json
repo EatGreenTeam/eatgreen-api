@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "lib": ["es2023"],
+    "module": "node16",
+    "target": "es2022",
+    "strict": true,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "moduleResolution": "node16",
+    "sourceMap": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "resolveJsonModule": true, // Allow importing JSON files as modules.
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": "./src" // Base directory to resolve non-relative module names
+  },
+  "paths": {
+    "@/*": ["*"]
+  },
+  "include": ["./src/**/*"],
+  "files": ["./src/custom.d.ts"],
+  "exclude": ["./node_modules", "./data"]
+}
