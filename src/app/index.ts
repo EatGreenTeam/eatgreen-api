@@ -9,10 +9,8 @@ import { errorHandler, undefinedRouteErrorHandler } from './middlewares/errorHan
 import { authRateLimiter } from './middlewares/rateLimiter';
 import { httpStatus } from './constants/errors';
 
-dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
@@ -41,6 +39,4 @@ app.use(errorHandler);
 // Connect to MongoDB
 connectDB();
 
-app.listen(PORT, () => {
-  console.log(`Server is running on ${PORT}`);
-});
+export default app;

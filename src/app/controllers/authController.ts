@@ -1,12 +1,10 @@
 import { Request, Response , NextFunction} from 'express';
 import jwt from 'jsonwebtoken';
 import User from '../models/User';
-import { registerValidation, loginValidation } from '../validations/authValidation';
-import dotenv from 'dotenv';
+import config from '../config';
 import { httpStatus } from '../constants/errors';
 import { AppError } from '../utils/AppError';
 
-dotenv.config();
 
 export default {
 
@@ -49,7 +47,7 @@ export default {
       }
 
       // Generate JWT token
-      const token = jwt.sign({ email: user.email }, process.env.JWT_SECRET!, { expiresIn: '1h' });
+      const token = jwt.sign({ email: user.email }, config.JWT_SECRET!, { expiresIn: '1h' });
 
       res.status(httpStatus.OK).json({ message: 'Login successful', token });
     } catch (error) {

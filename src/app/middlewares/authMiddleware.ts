@@ -1,8 +1,6 @@
 import { Request, Response, NextFunction } from 'express';
 import jwt from 'jsonwebtoken';
-import dotenv from 'dotenv';
-
-dotenv.config();
+import config from "../config"
 
 export const authenticateToken = (req: Request, res: Response, next: NextFunction) => {
   const authHeader = req.headers['authorization'];
@@ -10,7 +8,7 @@ export const authenticateToken = (req: Request, res: Response, next: NextFunctio
   if (!token) {
     return res.status(401).json({ message: 'Access denied. No token provided.' });
   }
-  jwt.verify(token, process.env.JWT_SECRET!, (err, user) => {
+  jwt.verify(token, config.JWT_SECRET!, (err, user) => {
     if (err) {
       return res.status(403).json({ message: 'Invalid or expired token' });
     }
