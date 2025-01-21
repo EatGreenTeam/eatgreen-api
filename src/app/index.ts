@@ -4,6 +4,7 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import morgan from 'morgan';
 import authRoutes from './routes/authRoutes';
+import debugRoutes from './routes/debugRoutes';
 import connectDB from './utils/db';
 import { errorHandler, undefinedRouteErrorHandler } from './middlewares/errorHandler';
 import { authRateLimiter } from './middlewares/rateLimiter';
@@ -32,6 +33,8 @@ app.get("/", (req: Request, res: Response) => {
   });
 
 app.use('/auth', authRoutes);
+app.use('/debug', debugRoutes); // Add debug routes
+
 
 setupSwagger(app)
 
