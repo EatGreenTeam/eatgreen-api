@@ -1,7 +1,3 @@
-Voici un exemple de fichier `README.md` pour votre projet **EatGreen-API**. Ce fichier fournit une documentation claire et concise pour les utilisateurs et les contributeurs.
-
----
-
 # EatGreen-API
 
 **EatGreen-API** est une API Node.js construite avec TypeScript, Express et MongoDB. Elle fournit des fonctionnalités d'authentification (inscription, connexion, déconnexion) et est documentée avec Swagger. Ce projet est conçu pour être facile à utiliser, à étendre et à déployer.
@@ -154,5 +150,3 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 - Merci à la communauté open source pour les outils et les bibliothèques utilisés dans ce projet.
 
 ---
-
-Ce fichier `README.md` est conçu pour être clair et informatif. Vous pouvez l'adapter en fonction des spécificités de votre projet. Si vous avez besoin d'autres sections ou d'informations supplémentaires, n'hésitez pas à les ajouter !
