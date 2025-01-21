@@ -8,6 +8,8 @@ import connectDB from './utils/db';
 import { errorHandler, undefinedRouteErrorHandler } from './middlewares/errorHandler';
 import { authRateLimiter } from './middlewares/rateLimiter';
 import { httpStatus } from './constants/errors';
+import swaggerJSDoc from 'swagger-jsdoc';
+import { setupSwagger } from './utils/swagger';
 
 
 const app = express();
@@ -31,6 +33,8 @@ app.get("/", (req: Request, res: Response) => {
   });
 
 app.use('/auth', authRoutes);
+
+setupSwagger(app)
 
 // Add error handler middleware
 app.use("*", undefinedRouteErrorHandler);
