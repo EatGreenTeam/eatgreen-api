@@ -6,7 +6,7 @@ const router = express.Router();
 
 /**
  * @swagger
- * /api/debug/collections:
+ * /debug/collections:
  *   get:
  *     summary: Get all collections and their data (for debugging purposes)
  *     tags: [Debug]
