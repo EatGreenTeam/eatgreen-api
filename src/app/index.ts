@@ -25,7 +25,6 @@ app.use(authRateLimiter);
 
 
 // Routes
-// Routes
 app.get("/", (req: Request, res: Response) => {
     res.status(httpStatus.OK).send({
       msg: "server is up and running"
