@@ -154,5 +154,3 @@ Ce projet est sous licence MIT. Voir le fichier [LICENSE](LICENSE) pour plus de 
 - Merci à la communauté open source pour les outils et les bibliothèques utilisés dans ce projet.
 
 ---
-
-Ce fichier `README.md` est conçu pour être clair et informatif. Vous pouvez l'adapter en fonction des spécificités de votre projet. Si vous avez besoin d'autres sections ou d'informations supplémentaires, n'hésitez pas à les ajouter !
